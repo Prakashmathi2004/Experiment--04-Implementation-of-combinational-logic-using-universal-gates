@@ -72,7 +72,7 @@ using NAND:
    assign p=( c & ~b & a);    
    assign q=( d & ~c & a);   
    assign r=( c & ~b & a);  
-   assign f=(~(~( p | q | r)));   
+   assign f= (~(~( p | q | r)));   
    endmodule   
 ## RTL
 
@@ -81,12 +81,12 @@ USING NAND GATE
 
 ![EX4](https://user-images.githubusercontent.com/118350045/211006187-0c5bbdce-dfdf-46a7-a52e-610974dbe7d3.png)
 
-## Timing Diagram
+Timing Diagram
 
 ![EX 4 timing](https://user-images.githubusercontent.com/118350045/211006335-7fcd18cc-be53-4696-90aa-c48b807d899b.png)
 
 
-##TRUTH TABLE
+TRUTH TABLE
 
 ![ex 4 truth table](https://user-images.githubusercontent.com/118350045/211006847-ad3d2239-39fd-4531-8e65-5249fa45f8f7.png)
 
