@@ -57,10 +57,14 @@ using NAND:
    input a,b,c,d;   
    output f;  
    wire p,q,r;  
-   assign p=(~c & b & a);  
-   assign q=(~d & c & ~a);  
-   assign r=(c & ~b & a);  
-   assign f=(~(~p & ~q & ~r));  
+   assign p=(~c & b & a);
+   
+   assign q=(~d & c & ~a);
+   
+   assign r=(c & ~b & a);
+   
+   assign f=(~(~p & ~q & ~r)); 
+   
    endmodule  
 
    
