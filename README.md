@@ -73,6 +73,7 @@ using NAND:
    assign f=(~(~( p | q | r)));
    endmodule
 ## RTL
+
 USING NAND GATE
 
 
@@ -81,6 +82,8 @@ USING NAND GATE
 ## Timing Diagram
 
 ![EX 4 timing](https://user-images.githubusercontent.com/118350045/211006335-7fcd18cc-be53-4696-90aa-c48b807d899b.png)
+
+
 ##TRUTH TABLE
 
 ![ex 4 truth table](https://user-images.githubusercontent.com/118350045/211006847-ad3d2239-39fd-4531-8e65-5249fa45f8f7.png)
