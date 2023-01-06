@@ -71,7 +71,7 @@ using NAND:
    wire p,q,r;   
    assign p=( c & ~b & a);    
    assign q=( d & ~c & a);   
-   assign r=( c & ~b & a);  
+   assign r=( c& ~b & a);  
    assign f= (~(~( p | q | r)));   
    endmodule   
 ## RTL
