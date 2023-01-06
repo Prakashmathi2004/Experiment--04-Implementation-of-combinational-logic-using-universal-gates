@@ -53,27 +53,28 @@ RegisterNumber: 22009001
 
 using NAND:
 
-   module combo1(a,b,c,d,f);    
-   input a,b,c,d;
-   output f;
-   wire p,q,r;
-   assign p=(~c & b & a);  
-   assign q=(~ d & c & ~a);  
-   assign r=(c & ~b & a);   
-   assign f=(~ (~p  &  ~q  &  ~r));   
-   endmodule
+module saisai(a,b,c,d,f);  
+input a,b,c,d;   
+output f;  
+wire f1,f2,f3;  
+assign f1 = (~c&~b&~a);  
+assign f2 = (~d&~c&~a);  
+assign f3 = (c&~(~b)&~a);  
+assign f= f1&~f2&~f3;  
+endmodule  
    
    using NOR:
    
-   module combo2(a,b,c,d,f);  
-   input a,b,c,d;   
-   output f;  
-   wire p,q,r;   
-   assign p=( c & ~b & a);    
-   assign q=( d & ~c & a);   
-   assign r=( c& ~b & a);  
-   assign f= (~(~( p | q | r)));   
-   endmodule   
+ module sai2(a,b,c,d,f);   
+input a,b,c,d;   
+output f;   
+wire f1,f2,f3,f4;   
+assign f1 = c&(~b)&a;   
+assign f2 = d&(~c)&a;   
+assign f3 = c&(~b)&a;   
+assign f4 = ~(f1|f2|f3);   
+not(f,f4);   
+endmodule  
 ## RTL
 
 USING NAND GATE
