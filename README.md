@@ -59,7 +59,7 @@ output f;
 wire f1,f2,f3;  
 assign f1 = (~c&~b&~a);  
 assign f2 = (~d&~c&~a);  
-assign f3 = (c&~(~b)&~a);  
+assign f3 = c&~(~b)&~a;  
 assign f= f1&~f2&~f3;  
 endmodule  
    
