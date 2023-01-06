@@ -52,26 +52,28 @@ RegisterNumber: 22009001
 ## Output:
 
 using NAND:
-   module combo1(a,b,c,d,f);
+
+   module combo1(a,b,c,d,f);    
    input a,b,c,d;
    output f;
    wire p,q,r;
-   assign p=(~c & b & a);
-   assign q=(~d & c & ~a);
-   assign r=(c & ~b & a);
-   assign f=(~(~p & ~q & ~r));
+   assign p=(~c & b & a);  
+   assign q=(~d & c & ~a);  
+   assign r=(c & ~b & a);   
+   assign f=(~(~p & ~q & ~r));   
    endmodule
    
    using NOR:
-   module combo2(a,b,c,d,f);
-   input a,b,c,d;
-   output f;
-   wire p,q,r;
-   assign p=( c & ~b & a);
-   assign q=( d & ~c & a);
-   assign r=( c & ~b & a);
-   assign f=(~(~( p | q | r)));
-   endmodule
+   
+   module combo2(a,b,c,d,f);  
+   input a,b,c,d;   
+   output f;  
+   wire p,q,r;   
+   assign p=( c & ~b & a);    
+   assign q=( d & ~c & a);   
+   assign r=( c & ~b & a);  
+   assign f=(~(~( p | q | r)));   
+   endmodule   
 ## RTL
 
 USING NAND GATE
@@ -87,6 +89,8 @@ USING NAND GATE
 ##TRUTH TABLE
 
 ![ex 4 truth table](https://user-images.githubusercontent.com/118350045/211006847-ad3d2239-39fd-4531-8e65-5249fa45f8f7.png)
+
+
 USING NOR GATE:
 
 ##RTL
